@@ -1,23 +1,50 @@
+---
+interface Props {
+	title: string;
+}
+const { title } = Astro.props;
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
+		<meta name="description" content="Studio Raphus - Knowledge sharing and development studio" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{title}</title>
+		
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
 
-<style>
-	html,
-	body {
+<style is:global>
+	:root {
+		--md-sys-color-primary: #006493;
+		--md-sys-color-on-primary: #ffffff;
+		--md-sys-color-surface: #fbfcff;
+		--md-sys-color-on-surface: #191c1e;
+		--md-sys-color-surface-container: #ecedf1;
+		
+		font-family: 'Roboto', sans-serif;
+		background-color: var(--md-sys-color-surface);
+		color: var(--md-sys-color-on-surface);
 		margin: 0;
+		padding: 0;
+	}
+	
+	body {
+		display: flex;
+		justify-content: center;
+		padding: 2rem;
+	}
+
+	main {
+		max-width: 800px;
 		width: 100%;
-		height: 100%;
 	}
 </style>

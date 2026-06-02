@@ -1,11 +1,95 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Studio Raphus | Hansraj Bissessur">
+	<main>
+		<header class="hero">
+			<h1 class="display-large">Studio Raphus</h1>
+			<h2 class="title-large">By Hansraj Bissessur</h2>
+			<p class="body-large">A dedicated space for building, sharing knowledge, and exploring the intersections of code and creativity.</p>
+		</header>
+
+		<section class="content-section">
+			<md-elevation></md-elevation>
+			<div class="card-content">
+				<h3 class="headline-medium">Professional Engineering</h3>
+				<p class="body-medium">
+					Senior Payment System Developer specializing in robust, high-scale financial integrations. Current architectural focus includes IPS MAUCAS, UPI implementations, and CBDC blockchain initiatives. 
+				</p>
+				<div class="chip-group">
+					<md-assist-chip label="Java & Spring Boot"></md-assist-chip>
+					<md-assist-chip label="AWS Certified Developer"></md-assist-chip>
+					<md-assist-chip label="React"></md-assist-chip>
+					<md-assist-chip label="Cloud Architecture"></md-assist-chip>
+				</div>
+			</div>
+		</section>
+
+		<section class="content-section">
+			<md-elevation></md-elevation>
+			<div class="card-content">
+				<h3 class="headline-medium">Current Lab Projects</h3>
+				<ul class="project-list body-medium">
+					<li><strong>RAG Helpdesk Bot:</strong> Automating IT support flows using Java, Spring Boot, and ChromaDB vector integrations.</li>
+					<li><strong>Animation Studio:</strong> Stop-motion and claymation modeling, focusing on high-fidelity, culturally contextual miniature dioramas.</li>
+					<li><strong>Automotive Tech:</strong> Ongoing comparative analysis and knowledge sharing on full-hybrid and EV systems.</li>
+				</ul>
+				<md-filled-button href="https://github.com/studio-raphus" target="_blank">
+					View Repositories
+				</md-filled-button>
+			</div>
+		</section>
+	</main>
 </Layout>
+
+<script>
+	// Import Material Design 3 Web Components
+	import '@material/web/button/filled-button.js';
+	import '@material/web/elevation/elevation.js';
+	import '@material/web/chips/assist-chip.js';
+</script>
+
+<style>
+	.hero {
+		margin-bottom: 3rem;
+		text-align: center;
+	}
+	
+	.display-large {
+		font-size: 3.5rem;
+		font-weight: 700;
+		margin-bottom: 0.5rem;
+		color: var(--md-sys-color-primary);
+	}
+
+	.content-section {
+		position: relative;
+		border-radius: 16px;
+		background-color: var(--md-sys-color-surface-container);
+		padding: 2rem;
+		margin-bottom: 2rem;
+		overflow: hidden;
+	}
+
+	.card-content {
+		position: relative;
+		z-index: 1;
+	}
+
+	.chip-group {
+		display: flex;
+		gap: 0.5rem;
+		flex-wrap: wrap;
+		margin-top: 1.5rem;
+	}
+
+	.project-list {
+		margin-bottom: 1.5rem;
+		line-height: 1.6;
+	}
+
+	.project-list li {
+		margin-bottom: 0.75rem;
+	}
+</style>
