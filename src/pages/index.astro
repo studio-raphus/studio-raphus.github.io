@@ -2,94 +2,291 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Studio Raphus | Hansraj Bissessur">
-	<main>
-		<header class="hero">
-			<h1 class="display-large">Studio Raphus</h1>
-			<h2 class="title-large">By Hansraj Bissessur</h2>
-			<p class="body-large">A dedicated space for building, sharing knowledge, and exploring the intersections of code and creativity.</p>
-		</header>
-
-		<section class="content-section">
-			<md-elevation></md-elevation>
-			<div class="card-content">
-				<h3 class="headline-medium">Professional Engineering</h3>
-				<p class="body-medium">
-					Senior Payment System Developer specializing in robust, high-scale financial integrations. Current architectural focus includes IPS MAUCAS, UPI implementations, and CBDC blockchain initiatives. 
-				</p>
-				<div class="chip-group">
-					<md-assist-chip label="Java & Spring Boot"></md-assist-chip>
-					<md-assist-chip label="AWS Certified Developer"></md-assist-chip>
-					<md-assist-chip label="React"></md-assist-chip>
-					<md-assist-chip label="Cloud Architecture"></md-assist-chip>
+<Layout title="STUDIO RAPHUS // CORE_INTERFACE">
+	<main class="container">
+		
+		<!-- HEADER SYSTEM -->
+		<header class="terminal-header">
+			<div class="avatar-matrix">
+				<img src="/dodo-236.png" alt="System Operator Node" class="glitch-avatar main-node" />
+				<div class="sub-nodes">
+					<img src="/dodo-301.png" alt="Sub Node A" class="mini-node" />
+					<img src="/dodo-325.png" alt="Sub Node B" class="mini-node" />
+					<img src="/dodo-372.png" alt="Sub Node C" class="mini-node" />
 				</div>
 			</div>
-		</section>
-
-		<section class="content-section">
-			<md-elevation></md-elevation>
-			<div class="card-content">
-				<h3 class="headline-medium">Current Lab Projects</h3>
-				<ul class="project-list body-medium">
-					<li><strong>RAG Helpdesk Bot:</strong> Automating IT support flows using Java, Spring Boot, and ChromaDB vector integrations.</li>
-					<li><strong>Animation Studio:</strong> Stop-motion and claymation modeling, focusing on high-fidelity, culturally contextual miniature dioramas.</li>
-					<li><strong>Automotive Tech:</strong> Ongoing comparative analysis and knowledge sharing on full-hybrid and EV systems.</li>
-				</ul>
-				<md-filled-button href="https://github.com/studio-raphus" target="_blank">
-					View Repositories
-				</md-filled-button>
+			<div class="header-text">
+				<h1 class="pixel-text glitch-title" data-text="STUDIO RAPHUS">STUDIO RAPHUS</h1>
+				<div class="status-bar">
+					<span class="pulse-indicator"></span>
+					<p class="status-msg">SYSTEM: ONLINE // OPERATOR: HANSRAJ BISSESSUR</p>
+				</div>
+				<p class="hero-bio">Senior Payment Systems Architect building high-scale financial infrastructure by day, and compiling experimental digital engineering modules by night.</p>
 			</div>
-		</section>
+		</header>
+
+		<!-- GRID ARCHITECTURE -->
+		<div class="dashboard-grid">
+			
+			<!-- MODULE 1: CORE ARCHITECTURE -->
+			<section class="cyber-card core-tech">
+				<div class="card-header">
+					<span class="card-tag">// INFRASTRUCTURE</span>
+					<h2 class="pixel-text section-title">CORE COMPLIANCE</h2>
+				</div>
+				<p class="card-body">High-scale financial integration modules engineered for transactional consensus, zero downtime, and absolute reliability.</p>
+				<div class="pixel-tags">
+					<span class="tag">JAVA / SPRING BOOT</span>
+					<span class="tag">AWS CERTIFIED</span>
+					<span class="tag">REACT</span>
+					<span class="tag">IPS MAUCAS</span>
+					<span class="tag">CBDC BLOCKCHAIN</span>
+				</div>
+			</section>
+
+			<!-- MODULE 2: EXPERIMENTAL LAB -->
+			<section class="cyber-card lab-projects">
+				<div class="card-header">
+					<span class="card-tag">// ACTIVE_LAB_EXPERIMENTS</span>
+					<h2 class="pixel-text section-title">ACTIVE RUNTIME</h2>
+				</div>
+				<div class="project-node">
+					<div class="node-title"><span class="marker">■</span> RAG HELPDESK ENGINE</div>
+					<p class="node-desc">Automated context retrieval system leveraging Spring Boot, vector store layers via ChromaDB, and intelligent AI parsing.</p>
+				</div>
+				<div class="project-node">
+					<div class="node-title"><span class="marker">■</span> CLAYMATION STUDIO</div>
+					<p class="node-desc">Stop-motion rendering pipeline exploring tactical miniature models in deep cultural context.</p>
+				</div>
+				<div class="project-node">
+					<div class="node-title"><span class="marker">■</span> HYBRID MOTIVE CORE</div>
+					<p class="node-desc">Ongoing telemetry collection and comparative evaluation of full-hybrid powertrain systems.</p>
+				</div>
+			</section>
+
+		</div>
+
+		<!-- TERMINAL FOOTER ACTION -->
+		<footer class="terminal-footer">
+			<a href="https://github.com/studio-raphus" target="_blank" class="pixel-btn">
+				<span class="btn-glitch">INITIALIZE_REPOS.SH</span>
+			</a>
+		</footer>
+
 	</main>
 </Layout>
 
-<script>
-	// Import Material Design 3 Web Components
-	import '@material/web/button/filled-button.js';
-	import '@material/web/elevation/elevation.js';
-	import '@material/web/chips/assist-chip.js';
-</script>
-
 <style>
-	.hero {
-		margin-bottom: 3rem;
-		text-align: center;
-	}
-	
-	.display-large {
-		font-size: 3.5rem;
-		font-weight: 700;
-		margin-bottom: 0.5rem;
-		color: var(--md-sys-color-primary);
+	.container {
+		max-width: 950px;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 2.5rem;
 	}
 
-	.content-section {
-		position: relative;
-		border-radius: 16px;
-		background-color: var(--md-sys-color-surface-container);
+	/* HEADER & AVATAR MATRIX */
+	.terminal-header {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		gap: 2.5rem;
+		background: var(--color-surface);
+		border: var(--pixel-border);
 		padding: 2rem;
-		margin-bottom: 2rem;
-		overflow: hidden;
+		box-shadow: 0 0 20px rgba(0, 255, 204, 0.15);
+		align-items: center;
 	}
 
-	.card-content {
-		position: relative;
-		z-index: 1;
+	.avatar-matrix {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+		align-items: center;
 	}
 
-	.chip-group {
+	.main-node {
+		width: 140px;
+		height: 140px;
+		border: 4px solid var(--color-secondary);
+		image-rendering: pixelated;
+	}
+
+	.sub-nodes {
 		display: flex;
 		gap: 0.5rem;
+	}
+
+	.mini-node {
+		width: 40px;
+		height: 40px;
+		border: 2px solid var(--color-primary);
+		image-rendering: pixelated;
+		opacity: 0.8;
+		transition: transform 0.2s, opacity 0.2s;
+	}
+	.mini-node:hover {
+		transform: scale(1.1);
+		opacity: 1;
+	}
+
+	.glitch-title {
+		font-size: 2.2rem;
+		color: #fff;
+		text-shadow: 3px 3px var(--color-secondary);
+		margin: 0 0 0.5rem 0;
+	}
+
+	.status-bar {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		background: #000;
+		padding: 0.25rem 0.75rem;
+		border-left: 3px solid var(--color-matrix);
+		margin-bottom: 1rem;
+	}
+
+	.pulse-indicator {
+		width: 8px;
+		height: 8px;
+		background: var(--color-matrix);
+		border-radius: 50%;
+		animation: pulse 1.5s infinite;
+	}
+
+	.status-msg {
+		font-size: 0.9rem;
+		color: var(--color-matrix);
+		margin: 0;
+	}
+
+	.hero-bio {
+		font-size: 1.15rem;
+		line-height: 1.6;
+		margin: 0;
+		color: #b3c2d4;
+	}
+
+	/* DASHBOARD GRID SYSTEM */
+	.dashboard-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 2rem;
+	}
+
+	@media (max-width: 768px) {
+		.terminal-header, .dashboard-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.cyber-card {
+		background: var(--color-surface);
+		border: 2px solid #232342;
+		border-top: 4px solid var(--color-primary);
+		padding: 1.5rem;
+		position: relative;
+		transition: border-color 0.3s, transform 0.3s;
+	}
+
+	.cyber-card:hover {
+		border-color: var(--color-primary);
+		transform: translateY(-4px);
+		box-shadow: 0 5px 15px rgba(0, 255, 204, 0.1);
+	}
+
+	.card-tag {
+		font-size: 0.8rem;
+		color: var(--color-secondary);
+		display: block;
+		margin-bottom: 0.25rem;
+	}
+
+	.section-title {
+		font-size: 1.1rem;
+		margin: 0 0 1.25rem 0;
+		color: #fff;
+	}
+
+	.card-body {
+		font-size: 1.1rem;
+		line-height: 1.5;
+		color: #b3c2d4;
+	}
+
+	/* INTERACTIVE PIXEL TAGS */
+	.pixel-tags {
+		display: flex;
 		flex-wrap: wrap;
+		gap: 0.5rem;
 		margin-top: 1.5rem;
 	}
 
-	.project-list {
-		margin-bottom: 1.5rem;
-		line-height: 1.6;
+	.tag {
+		background: #1b1b36;
+		border: 1px solid #3d3d75;
+		padding: 0.4rem 0.8rem;
+		font-size: 0.9rem;
+		color: var(--color-primary);
 	}
 
-	.project-list li {
-		margin-bottom: 0.75rem;
+	/* PROJECT LAB NODES */
+	.project-node {
+		border-left: 2px solid var(--color-secondary);
+		padding-left: 1rem;
+		margin-bottom: 1.25rem;
+	}
+
+	.node-title {
+		font-weight: bold;
+		color: #fff;
+		font-size: 1.05rem;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	.marker {
+		color: var(--color-secondary);
+		font-size: 0.8rem;
+	}
+
+	.node-desc {
+		margin: 0.25rem 0 0 0;
+		color: #94a3b8;
+		font-size: 1rem;
+		line-height: 1.4;
+	}
+
+	/* FUTURISTIC BUTTON */
+	.terminal-footer {
+		display: flex;
+		justify-content: center;
+		margin-top: 1rem;
+	}
+
+	.pixel-btn {
+		background: transparent;
+		color: var(--color-primary);
+		border: var(--pixel-border);
+		padding: 1rem 2rem;
+		font-family: 'Press Start 2P', cursive;
+		font-size: 0.9rem;
+		text-decoration: none;
+		position: relative;
+		cursor: pointer;
+		transition: background 0.2s, color 0.2s;
+	}
+
+	.pixel-btn:hover {
+		background: var(--color-primary);
+		color: var(--color-bg);
+		box-shadow: 0 0 15px var(--color-primary);
+	}
+
+	@keyframes pulse {
+		0% { opacity: 0.4; }
+		50% { opacity: 1; }
+		100% { opacity: 0.4; }
 	}
 </style>

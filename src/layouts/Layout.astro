@@ -9,42 +9,68 @@ const { title } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Studio Raphus - Knowledge sharing and development studio" />
+		<meta name="description" content="Studio Raphus - Cyber-Pixel Dev Laboratory" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/png" href="/dodo-236.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		
-		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+		<!-- Futuristic & Pixel Typography -->
+		<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 	</head>
 	<body>
+		<div class="scanlines"></div>
 		<slot />
 	</body>
 </html>
 
 <style is:global>
 	:root {
-		--md-sys-color-primary: #006493;
-		--md-sys-color-on-primary: #ffffff;
-		--md-sys-color-surface: #fbfcff;
-		--md-sys-color-on-surface: #191c1e;
-		--md-sys-color-surface-container: #ecedf1;
+		--color-bg: #0a0a12;
+		--color-surface: #121224;
+		--color-primary: #00ffcc;     /* Neon Cyan */
+		--color-secondary: #ff0055;   /* Cyber Pink */
+		--color-matrix: #39ff14;      /* Glitch Green */
+		--color-text: #e2e8f0;
+		--pixel-border: 4px solid #00ffcc;
 		
-		font-family: 'Roboto', sans-serif;
-		background-color: var(--md-sys-color-surface);
-		color: var(--md-sys-color-on-surface);
+		font-family: 'Share Tech Mono', monospace;
+		background-color: var(--color-bg);
+		color: var(--color-text);
 		margin: 0;
 		padding: 0;
+		overflow-x: hidden;
 	}
-	
+
+	/* Retro CRT Scanline Effect */
+	.scanlines {
+		position: fixed;
+		inset: 0;
+		pointer-events: none;
+		background: linear-gradient(
+			rgba(18, 16, 16, 0) 50%, 
+			rgba(0, 0, 0, 0.25) 50%
+		), linear-gradient(
+			90deg,
+			rgba(255, 0, 0, 0.06),
+			rgba(0, 255, 0, 0.02),
+			rgba(0, 0, 255, 0.06)
+		);
+		background-size: 100% 4px, 6px 100%;
+		z-index: 999;
+	}
+
 	body {
 		display: flex;
 		justify-content: center;
-		padding: 2rem;
+		min-height: 100vh;
+		padding: 3rem 1rem;
+		box-sizing: border-box;
 	}
 
-	main {
-		max-width: 800px;
-		width: 100%;
+	/* Title Typography */
+	.pixel-text {
+		font-family: 'Press Start 2P', cursive;
+		line-height: 1.5;
 	}
 </style>
